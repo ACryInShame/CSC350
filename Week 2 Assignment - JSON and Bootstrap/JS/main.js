@@ -1,11 +1,3 @@
-
-// When the page loads, have JavaScript loop through a JSON object
-//  and populate a Bootstrap table with some of your favorite 
-// singers, their best songs, and other details, such as 
-// date of birth or hometown.  Have at least four rows 
-// and three columns.
-// 
-
 // JSON object as per JavaScript Object Notation (JSON) in Week 2 Resources
 const Data = 
 [
