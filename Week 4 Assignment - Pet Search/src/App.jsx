@@ -6,14 +6,16 @@ import TableHeader from './components/TableHeader';
 
 
 function App(){
-  const [Search, SetSearch] = useState("");
-  const [SortField, SetSortField] = useState("");
+  const [Search, SetSearch] = useState(""); //Search String
+  
+  //sorting if a header is clicked
+  const [SortField, SetSortField] = useState(""); 
   const [SortOrder, SetSortOrder] = useState("asc");
 
-  //handles the sorting based on what feild and sort order
+  //handles the sorting based on the variables feild and sort order
   const handleSort = (field) => {
     if (field === SortField) {
-      SetSortOrder(SortOrder === "asc" ? "desc" : "asc");
+      SetSortOrder(SortOrder === "asc" ? "desc" : "asc"); //toggles between ascending and descending if header is clicked again
     } else {
       SetSortField(field);
       SetSortOrder("asc");
