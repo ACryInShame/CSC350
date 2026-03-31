@@ -182,3 +182,8 @@
     border-right-color: var(--border);
   }
 }
+
+/* changes cursor to pointer on hover */
+.cursor-pointer {
+  cursor: pointer;
+}
