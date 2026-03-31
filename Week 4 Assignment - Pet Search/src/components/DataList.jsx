@@ -1,6 +1,7 @@
 import {Animals} from "../assets/data";
 
-export default function DataList({ value, sortField, sortOrder }) {
+export default function DataList({ value, sortField, sortOrder }) 
+{
 
     //create filtered list based on search but check each value for data
     const filtered = Animals.filter(Animal =>
