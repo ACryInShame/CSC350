@@ -1,3 +1,47 @@
+
+import './App.css'
+import { useState } from 'react'
+import DataList from '../src/components/DataList'
+
+
+function App(){
+  const [Search, SetSearch] = useState("");
+
+
+  return (
+    <>
+      <div>
+        <h4> Search for An Animal</h4>
+        <input type="text" placeholder='Search fo an Animal' 
+          value={Search}
+          onChange={(Event)=>SetSearch(Event.target.value)}
+          className='form-control'
+        />
+      </div>
+      <div>
+        <table className='table table-stripped'>
+          <thead>
+            <tr>
+              <th className='text-start'>Name</th>
+              <th className='text-start'>Animal</th>
+              <th className='text-start'>Specialty</th>
+              <th className='text-start'>Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <DataList value={Search} />
+          </tbody>
+        </table>
+      </div>
+    </>
+  )
+}
+
+export default App
+
+
+
+/*
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
@@ -119,3 +163,4 @@ function App() {
 }
 
 export default App
+*/
