@@ -79,8 +79,11 @@ export default function App()
 
   return (
     <div className='container'>
+    <div className='hud'>
       <h1>Round: {Round}</h1>
       <h1>Score: {Score}</h1>
+    </div>
+    
 
       <span className='Animal' style={{top:Position.top ,left:Position.left}} onClick={HandleClick}>
           <Image src={CurrentAnimal} alt={"Animal Walking"} size={150} /> {/*animal sized to 150*150 to keep it simple*/}

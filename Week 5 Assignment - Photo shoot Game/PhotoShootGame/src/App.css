@@ -28,8 +28,19 @@ body{
 }
 
 .container {
+  text-align: center;
   position: relative;
   height: 100vh;
+
   width: 100vw;
-  color: navy;
+}
+
+.hud {
+  position: absolute;
+  top: 10px;
+  left: 25%;
+
+  display: flex;
+  justify-content: center;   /* centers horizontally */
+  gap: 50px;                 /* space between Round & Score */
 }
