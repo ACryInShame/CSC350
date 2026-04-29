@@ -8,7 +8,7 @@
 // import FMPic from "../assets/FrontMissions.png"
 // import UnityLogo from "../assets/UnityLogo.png"
 
-// import './App.css'
+import '../App.css'
 import { useState } from 'react'
 import GameList from '../components/GameList'
 import TableHeader from '../components/TableHeader';

@@ -3,7 +3,7 @@
 // Week 7 - Final Project
 import Header from "../components/Header"
 import Image from "../components/Image"
-import UsedImage from "../assets/Tim_Sweeney.png"
+import UsedImage from "../assets/Controller.png"
 
 
 export default function Inventor()

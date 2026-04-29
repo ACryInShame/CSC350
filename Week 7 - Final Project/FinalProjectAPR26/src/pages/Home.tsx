@@ -12,7 +12,7 @@ export default function Home()
 {
     return(
         <div>
-            <Header text="Home"/>
+            <Header text="History"/>
             <div className="row m-3 align-items-start">
                 <div className="col-md-12 text-black shadow">
                     Since my days playing mario on the Nintedo Entertainment System (NES) I have always wanted to make and publish my own games.

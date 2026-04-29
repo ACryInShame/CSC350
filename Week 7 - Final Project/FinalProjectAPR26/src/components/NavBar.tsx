@@ -12,10 +12,10 @@ export default function NavBar()
     <div>
         <nav className="navbar bg-dark text-white text-center" >
             <Image src={UsedImage} alt="Controller Icon" style={{ height: "1.5em" }}/>
-            <Link className="nav-link flex-fill" to="/">Home</Link>
+            <Link className="nav-link flex-fill" to="/">History</Link>
             <Link className="nav-link flex-fill" to="/FavoriteGames">Favorite Games</Link>
-            <Link className="nav-link flex-fill" to="/Inventor">Inventor</Link>
-            <Link className="nav-link flex-fill" to="/Inventor">Inventor</Link>
+            <Link className="nav-link flex-fill" to="/RecentGames">Recent Games</Link>
+            <Link className="nav-link flex-fill" to="/Contact">Contact Me</Link>
         </nav>
     </div>
     )

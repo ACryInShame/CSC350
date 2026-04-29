@@ -5,8 +5,8 @@ import { Routes, Route } from 'react-router-dom'
 
 import Home from '../pages/Home'
 import FavoriteGames from '../pages/FavoriteGames'
-// import Info from '../pages/Info'
-// import Inventor from '../pages/Inventor'
+import RecentGames from '../pages/RecentGames'
+import Contact from '../pages/Contact'
 
 export default function Routing()
 {
@@ -15,8 +15,8 @@ export default function Routing()
         <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/FavoriteGames" element={<FavoriteGames/>}/>
-            {/* <Route path="/Inventor" element={<Inventor/>}/> */}
-            {/* <Route path="/Inventor" element={<Inventor/>}/> */}
+            <Route path="/RecentGames" element={<RecentGames/>}/>
+            <Route path="/Contact" element={<Contact/>}/>
         </Routes>
     </div>
     )
