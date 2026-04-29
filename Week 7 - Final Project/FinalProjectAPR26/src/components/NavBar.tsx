@@ -13,7 +13,7 @@ export default function NavBar()
         <nav className="navbar bg-dark text-white text-center" >
             <Image src={UsedImage} alt="Controller Icon" style={{ height: "1.5em" }}/>
             <Link className="nav-link flex-fill" to="/">Home</Link>
-            <Link className="nav-link flex-fill" to="/Info">Information</Link>
+            <Link className="nav-link flex-fill" to="/FavoriteGames">Favorite Games</Link>
             <Link className="nav-link flex-fill" to="/Inventor">Inventor</Link>
             <Link className="nav-link flex-fill" to="/Inventor">Inventor</Link>
         </nav>
