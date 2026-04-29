@@ -1,3 +1,7 @@
+// Louis J D'Agusto
+// April 21st 2026
+// Week 7 - Final Project
+
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from './assets/vite.svg'

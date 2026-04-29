@@ -1,6 +1,6 @@
 // Louis J D'Agusto
 // April 21st 2026
-// Week 6 Assignment - Navigation
+// Week 7 - Final Project
 import Header from "../components/Header"
 import Image from "../components/Image"
 import UsedImage from "../assets/Unreal Example.webp"

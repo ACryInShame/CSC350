@@ -1,6 +1,6 @@
 // Louis J D'Agusto
 // April 21st 2026
-// Week 6 Assignment - Navigation
+// Week 7 - Final Project
 type HeaderProps = {
     text: string;
 };
