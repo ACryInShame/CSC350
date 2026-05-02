@@ -3,14 +3,14 @@
 // Week 7 - Final Project
 import Header from "../components/Header"
 import Image from "../components/Image"
-import UsedImage from "../assets/Controller.png"
+import UsedImage from "../assets/Controller.jpg"
 
 
-export default function Inventor()
+export default function Contact()
 {
     return(
         <div>
-            <Header text="Inventor"/>
+            <Header text="Projects"/>
             <div className="row m-3 align-items-start">
                 <Image src={UsedImage} alt="A Picture of Tim Sweeney"/>
                 <div className="col-md-6 text-black">

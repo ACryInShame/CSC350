@@ -6,7 +6,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from '../pages/Home'
 import FavoriteGames from '../pages/FavoriteGames'
 import RecentGames from '../pages/RecentGames'
-import Contact from '../pages/Contact'
+import Projects from '../pages/Projects'
 
 export default function Routing()
 {
@@ -16,7 +16,7 @@ export default function Routing()
             <Route path="/" element={<Home/>}/>
             <Route path="/FavoriteGames" element={<FavoriteGames/>}/>
             <Route path="/RecentGames" element={<RecentGames/>}/>
-            <Route path="/Contact" element={<Contact/>}/>
+            <Route path="/Projects" element={<Projects/>}/>
         </Routes>
     </div>
     )

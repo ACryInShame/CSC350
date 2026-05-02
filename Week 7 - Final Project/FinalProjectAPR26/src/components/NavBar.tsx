@@ -15,7 +15,7 @@ export default function NavBar()
             <Link className="nav-link flex-fill" to="/">History</Link>
             <Link className="nav-link flex-fill" to="/FavoriteGames">Favorite Games</Link>
             <Link className="nav-link flex-fill" to="/RecentGames">Recent Games</Link>
-            <Link className="nav-link flex-fill" to="/Contact">Contact Me</Link>
+            <Link className="nav-link flex-fill" to="/Projects">My Projects</Link>
         </nav>
     </div>
     )
