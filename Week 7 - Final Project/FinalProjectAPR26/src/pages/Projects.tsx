@@ -3,6 +3,8 @@
 // Week 7 - Final Project
 import Header from "../components/Header"
 import Image from "../components/Image"
+
+//images
 import ControllerImage from "../assets/Controller.jpg"
 import ViralImage from "../assets/Viral.png"
 import DungeonImage from "../assets/Dungeon.jpg"

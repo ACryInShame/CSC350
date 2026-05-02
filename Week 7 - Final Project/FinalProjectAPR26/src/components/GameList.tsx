@@ -1,3 +1,6 @@
+// Louis J D'Agusto
+// April 21st 2026
+// Week 7 - Final Project
 
 import { Games } from "../assets/data";
 

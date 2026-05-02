@@ -4,14 +4,12 @@
 import Header from "../components/Header"
 import Image from "../components/Image"
 import UsedImage from "../assets/Unreal Example.webp"
-// import TwoColumnRow from "../components/TwoColumnRow"
 
 export default function Info()
 {
     return(
         <div>
             <Header text="Information"/>
-            {/* <TwoColumnRow> */}
                 <Image src={UsedImage} alt="Unreal Engine"/>
                 <div className="col-md-6 text-black">
                     <p>
@@ -24,7 +22,6 @@ export default function Info()
                         companies such as Quixel.                    
                     </p>
                 </div>
-            {/* </TwoColumnRow> */}
         </div>
     )
 }

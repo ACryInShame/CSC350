@@ -1,4 +1,6 @@
-
+// Louis J D'Agusto
+// April 21st 2026
+// Week 7 - Final Project
 
 import { useState } from "react";
 import GameIcon from "../assets/Controller.jpg"
@@ -41,9 +43,6 @@ export default function GameForm() {
     }
 
     const ClearForm = () => {
-        // setGameName(''); //also clear out html input
-        // setGenre('');
-        // setPlaytime('');
         setAddNew({GameName:'',Genre:'',Playtime:''});
     }
 

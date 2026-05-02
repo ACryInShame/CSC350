@@ -1,4 +1,6 @@
-
+// Louis J D'Agusto
+// April 21st 2026
+// Week 7 - Final Project
 type TableHeaderProps = {
     Label: string;
     SortField: "ID" | "Name" | "Genre" | "PlayTime" | "Image";
