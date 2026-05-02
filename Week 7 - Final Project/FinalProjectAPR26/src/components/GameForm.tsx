@@ -5,6 +5,7 @@ import GameIcon from "../assets/Controller.jpg"
 
 //Variable type of games (acts similar to a struct)
 type Game = {
+    id: string,
     GameName: string,
     Genre: String,
     Playtime: String
@@ -13,9 +14,8 @@ type Game = {
 //filling a game form
 export default function GameForm() {
     //hold data of current game being entered
-    const [GameName, setGameName] = useState('');
-    const [Genre, setGenre] = useState('');
-    const [Playtime, setPlaytime] = useState('');
+    const [AddNew, setAddNew] = useState({GameName:'',Genre:'',Playtime:''});
+    const [CurrentID, setCurrentID] = useState(1);
 
     //holds list of games
     const [Games, setGames] = useState<Game[]>([]);
@@ -23,20 +23,28 @@ export default function GameForm() {
     //handles the sumbit button being pressed
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault(); //prevent page from refreashing
-        if (!GameName || !Genre || !Playtime)
+        if (!AddNew.GameName || !AddNew.Genre || !AddNew.Playtime)
             return 0; // do nothing if form is not filled out
 
-        const NewGame: Game = { GameName, Genre, Playtime };
+        const NewGame: Game = {id:CurrentID.toString(), GameName:AddNew.GameName, Genre:AddNew.Genre, Playtime:AddNew.Playtime };
+        setCurrentID(CurrentID+1);
 
         setGames([...Games/*Current Game list*/, NewGame]); //spread operator to add to the current list
         ClearForm();
 
     }
 
+    const handleRemove = (IDToRemove: string) =>
+    {
+        setGames(prev =>
+        prev.filter(game => game.id !== IDToRemove));
+    }
+
     const ClearForm = () => {
-        setGameName(''); //also clear out html input
-        setGenre('');
-        setPlaytime('');
+        // setGameName(''); //also clear out html input
+        // setGenre('');
+        // setPlaytime('');
+        setAddNew({GameName:'',Genre:'',Playtime:''});
     }
 
     return (
@@ -49,24 +57,24 @@ export default function GameForm() {
                                 <div className="mb-3 col-4 bg-light">
                                     <label htmlFor="GameName" className="m-3 col-form-label">Game Name</label>
                                     <input id="GameName" name="GameName" type="text" required
-                                        onChange={(e) => setGameName(e.target.value)}
-                                        value={GameName}
+                                        onChange={(e) => setAddNew({GameName:e.target.value,Genre:AddNew.Genre,Playtime:AddNew.Playtime})}
+                                        value={AddNew.GameName}
                                         className="form-control"
                                     />
                                 </div>
                                 <div className="mb-3 col-4 bg-light">
                                     <label htmlFor="Genre" className="m-3 col-form-label">Game Genre</label>
                                     <input id="Genre" name="Genre" type="text" required
-                                        onChange={(e) => setGenre(e.target.value)}
-                                        value={Genre}
+                                        onChange={(e) => setAddNew({GameName:AddNew.GameName,Genre:e.target.value,Playtime:AddNew.Playtime})}
+                                        value={AddNew.Genre}
                                         className="form-control"
                                     />
                                 </div>
                                 <div className="mb-3 col-4 bg-light">
                                     <label htmlFor="Playtime" className="m-3 col-form-label">Game Playtime</label>
                                     <input id="Playtime" name="Playtime" type="text" required
-                                        onChange={(e) => setPlaytime(e.target.value)}
-                                        value={Playtime}
+                                        onChange={(e) => setAddNew({GameName:AddNew.GameName,Genre:AddNew.Genre,Playtime:e.target.value})}
+                                        value={AddNew.Playtime}
                                         className="form-control"
                                     />
                                 </div>
@@ -88,14 +96,20 @@ export default function GameForm() {
                                     <th>Game Name</th>
                                     <th>Game Genre</th>
                                     <th>Play Time</th>
+                                    <th></th>  {/*column for delete button*/}
                                 </tr>
                             </thead>
                             <tbody>
-                                {Games.map((Game, index) => (
-                                    <tr key={index}>
+                                {Games.map((Game) => (
+                                    <tr key={Game.id}>
                                         <td>{Game.GameName}</td>
                                         <td>{Game.Genre}</td>
                                         <td>{Game.Playtime}</td>
+                                        <td
+                                        className="btn btn-sm btn-dager"
+                                        onClick={() => handleRemove(Game.id)} >
+                                            X
+                                        </td>
                                     </tr>
                                 ))}
                             </tbody>
